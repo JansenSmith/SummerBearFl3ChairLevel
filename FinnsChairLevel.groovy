@@ -4,7 +4,11 @@ import eu.mihosoft.vrl.v3d.Cylinder
 
 // code here
 CSG hole = new Cylinder(2*25.4/2.0,(1.0/4.0)*25.4, (int)64).toCSG()
+					.scalex(1.15)
+					.scaley(1.15)
 CSG cutter = new Cube(3*25.4).toCSG()
+					.scalex(1.15)
+					.scaley(1.15)
 					.toZMin()
 					.toXMin()
 					.roty(6)
@@ -12,6 +16,8 @@ CSG cutter = new Cube(3*25.4).toCSG()
 
 
 CSG core = new Cylinder(2.5*25.4/2.0,1.6*25.4, (int)64).toCSG()
+					.scalex(1.15)
+					.scaley(1.15)
 
 CSG wedge = new Cylinder(4,2,(int)3).toCSG()
 				.toZMax()
